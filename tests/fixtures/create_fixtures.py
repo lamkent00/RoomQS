@@ -24,12 +24,15 @@ def create_simple_rooms_dxf() -> None:
     - $INSUNITS = 4 (mm) → unit_factor = 1.0
     - Layer tường: "TUONG"
     - 3 phòng hình chữ nhật:
-        * Phòng A: (0,0)→(3000,0)→(3000,2500)→(0,2500) → 4 LINE + 3 TEXT
-        * Phòng B: (3000,0)→(6000,0)→(6000,2500)→(3000,2500)
-        * Phòng C: (0,2500)→(6000,2500)→(6000,5000)→(0,5000)
-    - Tổng LINE trên TUONG: 12 (3 phòng × 4 cạnh)
-    - 3 TEXT entities: "PHONG NGU", "WC", "PHONG KHACH"
-    - 1 MTEXT entity: "{\\fArial;PHONG KHACH MTEXT}" trên layer TEXT_LAYER
+        * Phòng A: (0,0)→(3000,0)→(3000,2500)→(0,2500) → 4 LINE trên TUONG
+        * Phòng B: (3000,0)→(6000,0)→(6000,2500)→(3000,2500) → 4 LINE trên TUONG
+        * Phòng C: (0,2500)→(6000,2500)→(6000,5000)→(0,5000) → 1 LWPOLYLINE closed trên TUONG
+    - Tổng LINE trên TUONG: 8 (Phòng A: 4 + Phòng B: 4)
+    - Tổng LWPOLYLINE trên TUONG: 1 (Phòng C — closed → 4 segments khi parse)
+    - Tổng wall_segments sau parse_dxf(): 12 (8 LINE + 4 LWPOLYLINE segments)
+    - 1 LINE trên layer OTHER: bị exclude khỏi wall_segments
+    - 3 TEXT entities: "PHONG NGU", "WC", "PHONG KHACH" trên TEXT_LAYER
+    - 1 MTEXT entity: "{\\fArial|b0|i0|c0|p34;PHONG KHACH MTEXT}" trên TEXT_LAYER
     """
     doc = ezdxf.new(dxfversion="R2013")
     doc.header["$INSUNITS"] = units.MM  # 4
