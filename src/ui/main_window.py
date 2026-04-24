@@ -2,6 +2,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget
 from shapely.geometry import Polygon
 
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -10,7 +11,7 @@ class MainWindow(QMainWindow):
 
         central_widget = QWidget()
         layout = QVBoxLayout()
-        
+
         # Test PySide6 label
         label_ui = QLabel("PySide6 Window Loaded Successfully!")
         layout.addWidget(label_ui)
@@ -24,11 +25,12 @@ class MainWindow(QMainWindow):
         except Exception as e:
             label_shapely = QLabel(f"Shapely Error: {str(e)}")
             label_shapely.setStyleSheet("color: red;")
-            
+
         layout.addWidget(label_shapely)
-        
+
         central_widget.setLayout(layout)
         self.setCentralWidget(central_widget)
+
 
 def run_ui():
     app = QApplication(sys.argv)
