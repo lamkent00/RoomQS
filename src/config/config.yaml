@@ -1,0 +1,14 @@
+cad:
+  layer_wall: "WALL"
+  layer_text_room: "ROOM_TEXT"
+  layer_door: "DOOR"
+
+calculation:
+  default_wall_height: 3000
+  default_wall_thickness: 200
+
+export:
+  sheet_names:
+    - "Du lieu Phong"
+    - "Du lieu Cua"
+    - "Canh Phong"

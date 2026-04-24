@@ -31,6 +31,7 @@ Dùng skill này khi user muốn tạo sprint plan, sprint brief hoặc bóc tá
    - Rủi ro / ambiguity nếu có
 5. Phải trích xuất ngữ cảnh từ tài liệu lớn vào `TICKET BRIEF` / `TICKET CONTEXT PACK` để Dev và QA không phải đọc lại PRD một cách mặc định.
 6. Kết thúc bằng đúng format **SPRINT BRIEF** và **TICKET CONTEXT PACK**.
+7. Lưu file vào `./docs/1.sprint_plans/{sprint_id}-plan.md`
 
 ## Quy tắc
 - Không tạo ticket quá lớn hoặc chạm nhiều module không cần thiết.

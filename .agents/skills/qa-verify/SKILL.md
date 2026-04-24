@@ -25,6 +25,7 @@ Dùng skill này khi user muốn nghiệm thu hoặc verify một ticket đã im
 5. Kiểm tra boundary kỹ thuật theo tài liệu kiến trúc.
 6. Chỉ fallback sang tài liệu gốc nếu brief hoặc handoff có dấu hiệu sai, thiếu, hoặc mâu thuẫn.
 7. Kết thúc bằng đúng format **QA REPORT**.
+8. Lưu file vào `./docs/3.qa_report/{ticket_id}.md`
 
 ## Quy tắc
 - Thiếu 1 Acceptance Criteria chưa đạt => `FAIL`.

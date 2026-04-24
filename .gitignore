@@ -8,3 +8,7 @@ __pycache__/
 Thumbs.db
 .idea/
 .vscode/
+*.dxf
+output/
+*.exe
+.venv/

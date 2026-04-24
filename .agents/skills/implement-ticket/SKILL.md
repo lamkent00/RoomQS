@@ -30,6 +30,7 @@ Dùng skill này khi user muốn thực thi chính xác **một** ticket.
 5. Không sửa file ngoài scope nếu không có lý do kỹ thuật thật sự rõ ràng.
 6. Chạy các kiểm tra liên quan.
 7. Kết thúc bằng đúng format **DEV HANDOFF**.
+8. Lưu file vào `./docs/2.dev_handoff/{ticket_id}.md`
 
 ## Quy tắc
 - Không tự suy diễn business logic ngoài Ticket Brief.
