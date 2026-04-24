@@ -337,6 +337,7 @@ Files dự kiến:
 - `tests/fixtures/simple_rooms.dxf`
 - `tests/fixtures/real_sample.dxf`
 - `tests/fixtures/corrupt.dxf`
+- `tests/fixtures/banve.dxf`
 - `tests/fixtures/README.md`
 
 Dependencies: T0-01 (file DXF thực nếu có)
